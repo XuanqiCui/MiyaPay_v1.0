@@ -109,7 +109,8 @@
             android:layout_height="wrap_content"
             android:text="支付宝"
             android:layout_weight="1"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:onClick="jpyAlipay"/>
 
         <Button
             android:id="@+id/btn_jpy_wechat"
@@ -117,7 +118,8 @@
             android:layout_height="wrap_content"
             android:text="微信"
             android:layout_weight="1"
-            android:layout_margin="15dp"/>
+            android:layout_margin="15dp"
+            android:onClick="jpyWechat"/>
     </LinearLayout>
 
 

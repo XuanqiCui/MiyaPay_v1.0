@@ -17,7 +17,7 @@ public class RmbCount extends AppCompatActivity {
 
     private EditText et_rmb_jpy;
     private EditText et_rmb_rmb;
-    private Button et_rmb_count;
+    private Button btn_rmb_count;
     private Button btn_rmb_alipay;
     private Button btn_rmb_wechat;
 
@@ -34,7 +34,7 @@ public class RmbCount extends AppCompatActivity {
 
         et_rmb_jpy = (EditText) findViewById(R.id.et_rmb_jpy);
         et_rmb_rmb = (EditText) findViewById(R.id.et_rmb_rmb);
-        et_rmb_count = (Button) findViewById(R.id.btn_rmb_count);
+        btn_rmb_count = (Button) findViewById(R.id.btn_rmb_count);
         btn_rmb_alipay = (Button) findViewById(R.id.btn_rmb_alipay);
         btn_rmb_wechat = (Button) findViewById(R.id.btn_rmb_wechat);
 
