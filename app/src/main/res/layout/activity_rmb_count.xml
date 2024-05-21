@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:layout_marginTop="30dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RmbCount">
+
+
+
+    <TextView
+        android:id="@+id/tv_rmb_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="以人民币结算"
+        android:textSize="35dp" />
+
+    <TextView
+        android:id="@+id/tv_rmb_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:text="输入该支付的日元："
+        android:textSize="35dp" />
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_rmb_jpy"
+            android:layout_width="250dp"
+            android:textSize="35dp"
+            android:hint="输入日元"
+            android:layout_height="100dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_rmb_jpyunit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JPY"
+            android:textSize="35dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="55dp"
+            android:layout_toRightOf="@+id/et_rmb_jpy"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_rmb_count"
+            android:text="结算"
+            android:textSize="35dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="rmbCount"/>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_marginTop="50dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/et_rmb_rmb"
+            android:layout_width="250dp"
+            android:textSize="35dp"
+            android:layout_height="100dp"/>
+
+
+        <TextView
+            android:id="@+id/tv_rmb_rmbunit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="RMB"
+            android:textSize="35dp"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="55dp"
+            android:layout_toRightOf="@+id/et_rmb_rmb"/>
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:orientation="horizontal"
+        android:layout_margin="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/btn_rmb_alipay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="支付宝"
+            android:layout_weight="1"
+            android:layout_margin="15dp"
+            android:onClick="rmbAlipay"/>
+
+        <Button
+            android:id="@+id/btn_rmb_wechat"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="微信"
+            android:onClick="rmbWechat"
+            android:layout_weight="1"
+            android:layout_margin="15dp"/>
+    </LinearLayout>
+
+
+
+
+
+</LinearLayout>
