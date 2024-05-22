@@ -14,13 +14,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <ImageView
+        <com.google.android.material.imageview.ShapeableImageView
             android:id="@+id/iv_company_logo"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/ic_launcher_background"/>
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_company_name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -40,7 +40,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_welcome"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,10 +49,11 @@
             android:textSize="35dp" />
 
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_paymethod"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
             android:layout_marginTop="35dp"
             android:text="最终支付币种："
             android:textSize="35dp" />
@@ -63,25 +64,25 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_rmb"
                 android:text="人民币"
-                android:textSize="35dp"
+                android:textSize="25dp"
                 android:layout_width="0dp"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:layout_margin="15dp"
                 android:onClick="rmbClick"/>
 
 
-            <Button
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_jpy"
                 android:text="日元"
-                android:textSize="35dp"
+                android:textSize="25dp"
                 android:layout_width="0dp"
                 android:layout_margin="15dp"
                 android:layout_weight="1"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:onClick="jpyClick"/>
 
         </LinearLayout>

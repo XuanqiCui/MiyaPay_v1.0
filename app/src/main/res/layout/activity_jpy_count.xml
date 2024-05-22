@@ -10,7 +10,7 @@
     tools:context=".JpyCount">
 
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_jpy_title"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:text="以日元结算"
         android:textSize="35dp" />
 
-    <TextView
+    <com.google.android.material.textview.MaterialTextView
         android:id="@+id/tv_jpy_count"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -36,11 +36,12 @@
             android:id="@+id/et_jpy_jpy"
             android:layout_width="250dp"
             android:textSize="35dp"
+            android:layout_marginLeft="15dp"
             android:hint="输入人民币"
             android:layout_height="100dp"/>
 
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_jpy_rmbunit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +49,7 @@
             android:textSize="35dp"
             android:layout_gravity="center"
             android:layout_centerInParent="true"
-            android:layout_marginLeft="55dp"
+            android:layout_marginLeft="45dp"
             android:layout_toRightOf="@+id/et_jpy_jpy"/>
 
     </RelativeLayout>
@@ -59,10 +60,10 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_jpy_count"
             android:text="结算"
-            android:textSize="35dp"
+            android:textSize="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
@@ -80,14 +81,15 @@
             android:id="@+id/et_jpy_rmb"
             android:layout_width="250dp"
             android:textSize="35dp"
+            android:layout_marginLeft="15dp"
             android:layout_height="100dp"/>
 
 
-        <TextView
+        <com.google.android.material.textview.MaterialTextView
             android:id="@+id/tv_jpy_jpyunit"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="RMB"
+            android:text="JPY"
             android:textSize="35dp"
             android:layout_gravity="center"
             android:layout_centerInParent="true"
@@ -103,7 +105,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_jpy_alipay"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -112,7 +114,7 @@
             android:layout_margin="15dp"
             android:onClick="jpyAlipay"/>
 
-        <Button
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_jpy_wechat"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
