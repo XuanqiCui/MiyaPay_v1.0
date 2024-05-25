@@ -3,5 +3,5 @@
     <string name="home">Home</string>
     <string name="rmb2jpy">rmb->jpy</string>
     <string name="jpy2rmb">jpy->rmb</string>
-    <string name="app_name">MiyaPay_v1.0</string>
+    <string name="app_name">MiyaPay</string>
 </resources>
