@@ -31,7 +31,7 @@ public class SplashActivity extends Activity {
             @Override
             //runnable()是个接口，实现了这个接口
             public void run() {
-                startActivity(new Intent(SplashActivity.this, MainActivity.class));
+                startActivity(new Intent(SplashActivity.this, MyNavigationActivity.class));
                 finish();
             }
         },2000);

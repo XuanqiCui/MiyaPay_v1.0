@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_jpy2rmb"
+        android:icon="@drawable/baseline_g_translate_24"
+        android:title="@string/jpy2rmb" />
+
+    <item
+        android:id="@+id/menu_rmb2jpy"
+        android:icon="@drawable/baseline_g_translate_24"
+        android:title="@string/rmb2jpy" />
+
+    <item
+        android:id="@+id/menu_home"
+        android:icon="@drawable/ic_home_black_24dp"
+        android:title="@string/home" />
+
+
+
+</menu>

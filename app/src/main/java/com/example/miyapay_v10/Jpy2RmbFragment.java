@@ -2,51 +2,51 @@ package com.example.miyapay_v10;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.LayoutInflater;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import androidx.activity.EdgeToEdge;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+import androidx.fragment.app.Fragment;
 
-public class RmbCount extends AppCompatActivity {
+public class Jpy2RmbFragment extends Fragment {
 
+
+    private Button btn_rmb_count;
     private EditText et_rmb_jpy;
     private EditText et_rmb_rmb;
-    private Button btn_rmb_count;
     private Button btn_rmb_alipay;
     private Button btn_rmb_wechat;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
-        setContentView(R.layout.activity_rmb_count);
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        // Inflate the layout for this fragment
 
-        initView();
+
+        View view = inflater.inflate(R.layout.fragment_jpy2_rmb, container, false);
+        initView(view);
+        return view;
+
     }
 
-    private void initView() {
-
-        et_rmb_jpy = (EditText) findViewById(R.id.et_rmb_jpy);
-        et_rmb_rmb = (EditText) findViewById(R.id.et_rmb_rmb);
-        btn_rmb_count = (Button) findViewById(R.id.btn_rmb_count);
-        btn_rmb_alipay = (Button) findViewById(R.id.btn_rmb_alipay);
-        btn_rmb_wechat = (Button) findViewById(R.id.btn_rmb_wechat);
-
-
+    private void initView(View view) {
+        btn_rmb_count = (Button) view.findViewById(R.id.btn_rmb_count);
+        et_rmb_jpy = (EditText)view.findViewById(R.id.et_rmb_jpy);
+        et_rmb_rmb = (EditText) view.findViewById(R.id.et_rmb_rmb);
+        btn_rmb_alipay = (Button) view.findViewById(R.id.btn_rmb_alipay);
+        btn_rmb_wechat = (Button) view.findViewById(R.id.btn_rmb_wechat);
     }
 
     public void rmbCount(View view) {
 
         String jpy = et_rmb_jpy.getText().toString().trim();
 
-        if (jpy.isEmpty()) {
-            Toast.makeText(this,"please input jpy",Toast.LENGTH_SHORT).show();
+        if (jpy.isEmpty()){
+            // Toast.makeText(Jpy2RmbFragment.this, "please input jpy", Toast.LENGTH_SHORT).show();
         }
         else {
             float jpyfloat = Float.parseFloat(jpy);
