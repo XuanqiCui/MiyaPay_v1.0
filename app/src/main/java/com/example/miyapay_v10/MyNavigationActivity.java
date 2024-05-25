@@ -41,16 +41,16 @@ public class MyNavigationActivity extends AppCompatActivity implements BottomNav
         switch (item.getItemId()) {
             case R.id.menu_home:
                 fragmentTransaction.replace(R.id.home_fragment, new HomeFragment()).commit();
-                Toast.makeText(this, "Home", Toast.LENGTH_SHORT).show();
+
                 return true;
             case R.id.menu_jpy2rmb:
                 fragmentTransaction.replace(R.id.home_fragment, new Jpy2RmbFragment()).commit();
-                Toast.makeText(this, "Home2", Toast.LENGTH_SHORT).show();
+
 
                 return true;
             case R.id.menu_rmb2jpy:
                 fragmentTransaction.replace(R.id.home_fragment, new Rmb2JpyFragment()).commit();
-                Toast.makeText(this, "Home3", Toast.LENGTH_SHORT).show();
+
 
                 return true;
         }

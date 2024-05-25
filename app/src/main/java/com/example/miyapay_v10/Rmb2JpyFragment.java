@@ -1,5 +1,6 @@
 package com.example.miyapay_v10;
 
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -22,19 +23,13 @@ public class Rmb2JpyFragment extends Fragment {
     private Button btn_jpy_alipay;
     private Button btn_jpy_wechat;
 
+
     public Rmb2JpyFragment() {
         // Required empty public constructor
     }
 
     @Override
-    public void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-
-    }
-
-    @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                             Bundle savedInstanceState) {
+    public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
 
 
@@ -43,6 +38,48 @@ public class Rmb2JpyFragment extends Fragment {
         return view;
 
     }
+
+    @Override
+    public void onActivityCreated(@Nullable Bundle savedInstanceState) {
+        super.onActivityCreated(savedInstanceState);
+
+        btn_jpy_count.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String rmb = et_jpy_rmb.getText().toString().trim();
+
+                if (rmb.isEmpty()) {
+                    Toast.makeText(getActivity(),"please input rmb",Toast.LENGTH_SHORT).show();
+                }
+                else {
+                    float rmbfloat = Float.parseFloat(rmb);
+                    float jpyfloat = rmbfloat*20;
+                    String jpy= String.valueOf(jpyfloat);
+                    et_jpy_jpy.setText(jpy);
+                }
+            }
+        });
+
+        btn_jpy_alipay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClassName("com.eg.android.AlipayGphone","com.alipay.mobile.quinox.splash.ShareDispenseActivity" );
+                startActivity(intent);
+            }
+        });
+
+        btn_jpy_wechat.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClassName("com.tencent.mm","com.tencent.mm.ui.LauncherUI");
+                startActivity(intent);
+            }
+        });
+
+    }
+
 
     public void jpyCount(View view) {
 
@@ -68,15 +105,15 @@ public class Rmb2JpyFragment extends Fragment {
         btn_jpy_wechat = (Button)view.findViewById(R.id.btn_jpy_wechat);
     }
 
-    public void jpyAlipay(View view) {
-        Intent intent = new Intent();
-        intent.setClassName("com.eg.android.AlipayGphone","com.alipay.mobile.quinox.splash.ShareDispenseActivity" );
-        startActivity(intent);
-    }
-
-    public void jpyWechat(View view) {
-        Intent intent = new Intent();
-        intent.setClassName("com.tencent.mm","com.tencent.mm.ui.LauncherUI");
-        startActivity(intent);
-    }
+//    public void jpyAlipay(View view) {
+//        Intent intent = new Intent();
+//        intent.setClassName("com.eg.android.AlipayGphone","com.alipay.mobile.quinox.splash.ShareDispenseActivity" );
+//        startActivity(intent);
+//    }
+//
+//    public void jpyWechat(View view) {
+//        Intent intent = new Intent();
+//        intent.setClassName("com.tencent.mm","com.tencent.mm.ui.LauncherUI");
+//        startActivity(intent);
+//    }
 }

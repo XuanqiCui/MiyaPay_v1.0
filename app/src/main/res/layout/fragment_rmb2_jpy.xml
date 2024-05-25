@@ -29,7 +29,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/et_jpy_jpy"
+            android:id="@+id/et_jpy_rmb"
             android:layout_width="250dp"
             android:textSize="35dp"
             android:layout_marginLeft="15dp"
@@ -46,7 +46,7 @@
             android:layout_gravity="center"
             android:layout_centerInParent="true"
             android:layout_marginLeft="45dp"
-            android:layout_toRightOf="@+id/et_jpy_jpy"/>
+            android:layout_toRightOf="@+id/et_jpy_rmb"/>
 
     </RelativeLayout>
 
@@ -62,8 +62,10 @@
             android:textSize="25dp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:onClick="jpyCount"/>
+            android:layout_gravity="center_horizontal"  />
+<!--            android:onClick="jpyCount" -->
+
+
     </LinearLayout>
 
 
@@ -74,7 +76,7 @@
         android:layout_height="wrap_content">
 
         <EditText
-            android:id="@+id/et_jpy_rmb"
+            android:id="@+id/et_jpy_jpy"
             android:layout_width="250dp"
             android:textSize="35dp"
             android:layout_marginLeft="15dp"
@@ -90,7 +92,7 @@
             android:layout_gravity="center"
             android:layout_centerInParent="true"
             android:layout_marginLeft="55dp"
-            android:layout_toRightOf="@+id/et_jpy_rmb"/>
+            android:layout_toRightOf="@+id/et_jpy_jpy"/>
 
     </RelativeLayout>
 
